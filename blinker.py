@@ -2,7 +2,7 @@ import time
 import sys
 import blinkt
 import threading
-import blinkFunctions
+from pilights import blinkFunctions
 
 
 class Blinker:
