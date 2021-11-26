@@ -9,7 +9,6 @@ class Blinker:
 
     def __init__(self, brightness: float=0.1, *args) -> None:
         self.views = {"default": list(*args)}
-        print(self.views)
         blinkt.set_brightness(min(brightness, 1))
         blinkt.set_clear_on_exit()
         self.mode = "default"
@@ -27,7 +26,6 @@ class Blinker:
     def _show(self): 
         while True:
             for view in self.views[self.mode]:
-                print(view)
                 view()
                 blinkt.show()
                 time.sleep(2)
