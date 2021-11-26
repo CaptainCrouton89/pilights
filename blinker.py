@@ -8,7 +8,7 @@ from pilights import blinkFunctions
 class Blinker:
 
     def __init__(self, brightness: float=0.1, *args) -> None:
-        self.views = {"default": list(args)}
+        self.views = {"default": list(*args)}
         print(self.views)
         blinkt.set_brightness(min(brightness, 1))
         blinkt.set_clear_on_exit()
