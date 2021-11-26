@@ -2,7 +2,7 @@ import time
 import sys
 import blinkt
 import threading
-from pilights import blinkFunctions
+from pilights import blinkFunctions, templates
 
 
 class Blinker:
@@ -32,7 +32,7 @@ class Blinker:
 
 
 if __name__ == '__main__':
-    blinker = Blinker(float(sys.argv[1]), blinkFunctions.get_cpu_load, blinkFunctions.get_cpu_temp)
+    blinker = Blinker(float(sys.argv[1]), templates.DEFAULT)
     blinker.show()
     while True:
         print("I'm doing stuff while it blinks!")
